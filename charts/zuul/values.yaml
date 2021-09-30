@@ -1,0 +1,30 @@
+---
+zookeeper:
+  hosts: zookeeper
+
+executor:
+  enabled: true
+  replicas: 3
+  diskLimitPerJob: 250
+
+merger:
+  enabled: true
+  replicas: 3
+
+scheduler:
+  enabled: true
+  gearman:
+    port: 4730
+  tenantConfigPath: /etc/zuul/main.yaml
+
+web:
+  enabled: true
+  replicas: 3
+  port: 9000
+  serviceType: ClusterIP
+
+ingress:
+  enabled: true
+
+tenantConfig: {}
+extraFiles: {}
