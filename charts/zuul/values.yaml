@@ -4,12 +4,12 @@ zookeeper:
 
 executor:
   enabled: true
-  replicas: 3
+  replicas: 2
   diskLimitPerJob: 250
 
 merger:
   enabled: true
-  replicas: 3
+  replicas: 2
 
 scheduler:
   enabled: true
@@ -19,12 +19,12 @@ scheduler:
 
 web:
   enabled: true
-  replicas: 3
+  replicas: 1
   port: 9000
   serviceType: ClusterIP
 
 ingress:
-  enabled: true
+  enabled: false
 
 tenantConfig: {}
 extraFiles: {}
